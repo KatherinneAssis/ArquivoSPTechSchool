@@ -1,0 +1,22 @@
+.card{
+    background-color: rgb(122, 209, 116);
+    width: 400px;
+    padding: 20px;
+    border: 2px dotted rgb(255, 255, 255);
+    border-radius: 5px;
+    margin-top: 20px;
+    font-family: monospace;
+    margin-inline: 550px;
+}
+.avatar{
+    background-color: rgb(11, 181, 25);
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+}
+
+.destaque{
+    color: rgb(15, 47, 36);
+    font-family: monospace; 
+    font-size: 20px;
+}
