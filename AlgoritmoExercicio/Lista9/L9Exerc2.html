@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 9 - Exercicio 2</title>
+</head>
+
+<body>
+    Qual o seu salario? <input id="input_salario"> <br> <br>
+    <button onclick="ConfirmarSalario()">Confirmar Salário</button> <br><br>
+    <div id="GranaAtual"></div><br><br>
+    <button onclick="Pagar100()">Pagar conta de 100.</button>
+    <button onclick="Pagar500()">Pagar conta de 500.</button>
+    <button onclick="Ganhar2000()">Ganhar 2000 na loteria.</button>
+</body>
+
+</html>
+<script>
+    var salario = 0;
+
+    function ConfirmarSalario() {
+        salario = Number(input_salario.value);
+        GranaAtual.innerHTML = `Grana atual: R$${salario}.`
+    }
+    function Pagar100() {
+        GranaAtual.innerHTML = `Grana atual: R$${(salario -= 100)}.`
+    }
+    function Pagar500() {
+        GranaAtual.innerHTML = `Grana atual: R$${(salario -= 500)}.`
+    }
+    function Ganhar2000() {
+        GranaAtual.innerHTML = `Grana atual: R$${(salario += 2000)}.`
+    }
+</script>

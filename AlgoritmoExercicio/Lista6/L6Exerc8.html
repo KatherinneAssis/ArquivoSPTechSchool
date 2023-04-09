@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Quantos pães franceses você come por dia? 
+    <br> <input id="input_pao"> <br>
+    <br>Quantos pacotes de bolacha recheada você come por dia? 
+    <br> <input id="input_bolacha"> <br>
+    <br> Quantos copos de achocolatado você tem tomado por dia?
+    <br> <input id="input_achoc"> 
+    <br> <br> 
+    <button onclick="paofrances()"> Verificar calorias.</button>
+    <br> <br> 
+    <div id="gordinho"></div>
+</body>
+</html>
+<script>
+    function paofrances(){
+    var pao = Number(input_pao.value)
+    var bol = Number(input_bolacha.value)
+    var achoc = Number(input_achoc.value)
+    var pao1 = pao *50
+    var bol1 = bol *80
+    var achoc1 = achoc *70
+    var total = pao1 + bol1 + achoc1
+
+    if(total <200){
+        gordinho.innerHTML = `Parabéns, vai sair em forma da quarentena!`
+    }else if(total < 400){
+        gordinho.innerHTML = `Cuidado, vai ficar mais "fofinho(a)" após quarentena!`
+    }else{
+        gordinho.innerHTML = `Bom, acho que muitos não vão te reconhecer após a quarentena.`
+    }
+    }
+</script>

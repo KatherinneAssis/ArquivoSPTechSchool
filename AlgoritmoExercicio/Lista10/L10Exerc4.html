@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 10 - Exercício 4</title>
+</head>
+
+<body>
+    Idade: <input id="input_idade"> <br>
+    <br>
+    <button onclick="estagiosIdade()"> Ver Pontuação.</button><br>
+    <br>
+    Já passou pela infância: <span id="infancia"></span><br>
+    Já passou pela adolescência: <span id="adolescencia"></span><br>
+    Já é um idoso: <span id="idoso"></span><br>
+    <br>
+    TOTAL DE PONTOS: <span id="pontuacaoTotal"></span>
+</body>
+
+</html>
+<script>
+
+    var pontuacao = 0;
+    function estagiosIdade() {
+        var idade = Number(input_idade.value);
+        var passouInfancia = idade >= 12;
+        var passouAdolescencia = idade >= 13;
+        var passouIdoso = idade >= 65;
+
+
+        if (passouInfancia) {
+            pontuacao += 10;
+            if (passouAdolescencia) {
+                pontuacao += 20;
+                if (passouIdoso) {
+                    pontuacao += 50;
+                }
+            }
+        }
+        idoso.innerHTML = `${passouIdoso}`;
+        adolescencia.innerHTML = `${passouAdolescencia}`;
+        infancia.innerHTML = `${passouInfancia}`;
+        pontuacaoTotal.innerHTML = `${pontuacao}`;
+    }
+</script>

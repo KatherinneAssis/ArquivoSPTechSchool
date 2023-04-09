@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 11 - Exercício 10</title>
+</head>
+
+<body>
+    Numero menor: <input id="input_numMenor">
+    <br><br>
+    Numero maior: <input id="input_numMaior">
+    <br><br>
+    <button onclick="intervaloNumerico()"> S2 Pares </button>
+    <br><br>
+    <div id="MensagemNum"></div>
+</body>
+
+</html>
+<script>
+    function intervaloNumerico() {
+        MensagemNum.innerHTML = ``;
+        var numMenor = Number(input_numMenor.value);
+        var numMaior = Number(input_numMaior.value);
+
+        while (numMenor <= numMaior) {
+            numMenor++;
+            if (numMenor % 2 == 0) {
+                MensagemNum.innerHTML += `${numMenor} <br>`;
+            }
+        }
+    }
+</script>

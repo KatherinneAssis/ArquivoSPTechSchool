@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 9 - Exercício 3</title>
+</head>
+
+<body>
+    <div style="color: blue;">
+        Total guardado no cofrinho: R$<span id="totalGuardado">0</span> <br>
+        Depósitos efetuados: <span id="dinheiroDepositado">0</span> <br>
+        Retiradas efetuadas: <span id="retiradas">0</span> </div>
+    <br>
+    <button onclick="DepositarCinc()">Depositar 0,50</button>
+    <button onclick="DepositarDois()">Depositar 2,00</button>
+    <button onclick="RetirarCinc()">Retirar 0,50</button> <br>
+    <br>
+    Valor: <input id="retirarValor">
+    <button onclick="valorAretirar()">Retirar valor.</button>
+</body>
+
+</html>
+<script>
+    var Guardado = 0;
+    var deposito = 0;
+    var dRetirado = 0;
+
+    function DepositarCinc() {
+        Guardado += 0.50;
+        deposito += 1;
+
+        totalGuardado.innerHTML = Guardado;
+        dinheiroDepositado.innerHTML = deposito;
+    }
+    function DepositarDois() {
+        Guardado += 2;
+        deposito += 1;
+
+
+        totalGuardado.innerHTML = Guardado;
+        dinheiroDepositado.innerHTML = deposito;
+    }
+    function RetirarCinc() {
+        Guardado -= 0.50;
+        dRetirado += 1;
+
+        totalGuardado.innerHTML = Guardado;
+        retiradas.innerHTML = dRetirado;
+    }
+    function valorAretirar() {
+        var retirarV = Number(retirarValor.value)
+        Guardado -= retirarV;
+
+        totalGuardado.innerHTML = Guardado;
+    }
+</script>

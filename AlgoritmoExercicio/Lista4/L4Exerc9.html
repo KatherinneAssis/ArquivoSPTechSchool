@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Exercicio 9 - Algoritmo</h1>
+    Qual a ultima serie que você assistiu? <br>
+    <input id="input_serie"> <br><br>
+    Quantos episódios você assistiu? <br>
+    <input id="input_episodios"><br><br>
+    <button onclick="amoSeriados()">Verificar Nivel</button> <br><br>
+    <div id="Viciadx"></div>
+</body>
+</html>
+
+<script>
+    function amoSeriados(){
+        var serie = (input_serie.value);
+        var episódios = Number(input_episodios.value);
+        var totalEps = episódios * 22;
+        var totalHoras = totalEps / 60;
+
+
+        if (totalHoras < 30) {
+            Viciadx.innerHTML = `Vejo que você gosta da série ${serie}! <br> Você assistiu ${totalHoras} horas.`
+        }
+        if (totalHoras >= 30) {
+            Viciadx.innerHTML = `Vejo que você gosta da série ${serie}! <br> Você assistiu ${totalHoras} horas. <br>
+            Uau, você realmente gosta dessa série!`
+        }
+    }
+</script>

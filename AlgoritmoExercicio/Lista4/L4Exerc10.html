@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 10</title>
+</head>
+<body>
+    <h1>Exercicio 10 - Algoritmo</h1>
+    Qual o valor do seu saldo na sua conta bancaria? <br> <input id="input_saldo"> <br> <br>
+    <button onclick="saldoConta()">Verificar finanças!</button>
+    <br> <br>
+    <div id="situacao"></div>
+</body>
+</html>
+
+<script>
+    function saldoConta(){
+        var saldo = Number(input_saldo.value)
+        if (saldo ==0){
+            situacao.innerHTML = ` Conta zerada.`
+        }
+        if (saldo < 0){
+            situacao.innerHTML = `<p style=" color: red;">Está devendo!</p>
+            `
+        }
+        if (saldo > 0){
+            situacao.innerHTML = `<p style=" color: blue;">Saldo positivo! &#x1F642</p>`
+        }
+    }
+</script>

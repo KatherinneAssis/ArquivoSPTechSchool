@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 11 - Exercicío 3</title>
+</head>
+
+<body>
+    <button onclick="fraseEscolha()">
+        Diga algo sobre a matéria de Algoritmos.
+    </button> <br>
+    <br>
+    <div id="fraseLinda"></div>
+</body>
+
+</html>
+<script>
+    function fraseEscolha() {
+        fraseLinda.innerHTML = ' ';
+        var numero = 1;
+        while (numero <= 7) {
+            fraseLinda.innerHTML += `${numero}. Boa tarde. <br>`;
+            numero += 1;
+        }
+    }
+</script>

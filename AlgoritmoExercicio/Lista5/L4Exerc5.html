@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Quantidade de kWh: <input id="input_kwh">
+    <button onclick="custoLuz()">Calcular Conta de Luz</button>
+    <div id="msgkwh"></div>
+</body>
+</html>
+<script>
+    function custoLuz(){
+        var kwh = Number(input_kwh.value)
+        var resultadokwh = kwh * 0.85
+        var resultadoMenor = resultadokwh * 0.9
+
+        if(kwh < 100){
+            msgkwh.innerHTML=`Valor da conta: ${resultadoMenor}`
+        }else{
+            msgkwh.innerHTML=`Valor da conta: ${resultadokwh}`
+        }
+    }
+</script>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Qual a sua renda? <input id="input_renda"> <br> <br>
+    Qual a sua renda total familiar? <input id="input_familiar"> <br> <br>
+    <button onclick="CalcRenda()">Verificar Ajuda.</button>
+</body>
+</html>
+<script>
+    function CalcRenda(){
+        var renda = Number(input_renda.value);
+        var familiar = Number(input_familiar.value);
+
+        if(renda <= 1050 && familiar <= 2100 ){
+            alert('Você tera direito!')
+        }else{
+            alert('Você NÃO terá direito.')
+        }
+    }
+</script>

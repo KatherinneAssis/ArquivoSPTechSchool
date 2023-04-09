@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 10 - Exercício 9</title>
+</head>
+
+<body>
+    Login: <input id="input_Login"> <br>
+    Senha: <input id="input_Senha" type="password"> <br>
+    <br>
+    <button onclick="acessarLogin()">Entrar</button>
+
+    <div id="Mensagem"></div>
+    <p style="color: blue;"></p>
+</body>
+
+</html>
+
+<script>
+
+    function acessarLogin() {
+        var Login = input_Login.value;
+        var Senha = input_Senha.value;
+        var CheckLogin = Login == 'aidimin';
+        var CheckSenha = Senha == 'seinha';
+        var CheckCredenciais = CheckLogin && CheckSenha;
+
+
+        if (CheckCredenciais) {
+            Mensagem.innerHTML = `<p style="color: blue;">Usuário autenticado com sucesso!</p>`;
+        }
+        if (CheckLogin != true) {
+            Mensagem.innerHTML += `<p style="color: red;">Login Incorreto!</p <br>`;
+        }
+        if (CheckSenha != true) {
+            Mensagem.innerHTML += `<p style="color: red;">Sua senha está inválida!</p> <br>`;
+            alert('Entre em contato com o suporte para recuperar sua senha');
+        }
+
+    }
+</script>

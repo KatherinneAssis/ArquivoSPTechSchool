@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Qual a sua renda individual? <input id="input_individual"> <br> <br>
+    Qual a sua renda familiar?<input id="input_familiar"> <br>
+    <br>
+    <button onclick="AuxilioCovid()">Terei o benefício?</button> <br> <br>
+    <div id="Auxilio"></div>
+</body>
+</html>
+<script>
+    function AuxilioCovid(){
+        var individual = Number(input_individual.value);
+        var familiar = Number(input_familiar.value);
+
+        if(individual <= 2000 || familiar <= 3000){
+            Auxilio.innerHTML = `Você terá direito ao auxílio.`;
+        } else {
+            Auxilio.innerHTML = `Sem direito ao auxílio.`;
+        }
+    }
+</script>

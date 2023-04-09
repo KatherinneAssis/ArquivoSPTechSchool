@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 10 - Exercício 5</title>
+</head>
+
+<body>
+    Peso: <input id="input_peso"> <br>
+    Altura: <input id="input_altura"> <br>
+    <br>
+    <button onclick="VerificarIMC()"> Verificar IMC </button> <br>
+    <br>
+    <div id="Mensagem"></div>
+</body>
+
+</html>
+<script>
+
+    function VerificarIMC() {
+        var peso = Number(input_peso.value);
+        var altura = Number(input_altura.value);
+
+        if (peso == " " || altura == " ") {
+            alert("Por favor, insira os dados pedidos.");
+        }
+        if (altura > 3) {
+            altura /= 100;
+        }
+
+        var imc = peso / (altura * altura);
+
+        if (imc < 18.5) {
+            Mensagem.innerHTML = `<span style="color: blue;">Abaixo do Peso: ${imc.toFixed(2)}</span>`;
+        }
+
+        if (imc >= 18.5) {
+            Mensagem.innerHTML = `<span style="color: green;">Peso Ideal: ${imc.toFixed(2)}</span>`;
+        }
+
+        if (imc >= 24.9) {
+            Mensagem.innerHTML = `<span style="color: yellow;">Excesso de Peso: ${imc.toFixed(2)}</span>`;
+        }
+
+        if (imc >= 30) {
+            Mensagem.innerHTML = `<span style="color: orange;">Obesidade: ${imc.toFixed(2)}</span>`;
+        }
+
+        if (imc >= 35) {
+            Mensagem.innerHTML = `<span style="color: red;">Obesidade Extrema: ${imc.toFixed(2)}</span>`;
+        }
+    }
+</script>

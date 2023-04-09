@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bom doce</title>
+</head>
+<body>
+    <h1>Mercado bom doce</h1>
+    Qual a quantidade de chocolates? <br>
+    <input id="input_choc"><br><br>
+    <button onclick="CalculoChoc()">Compra</button><br><br>
+    <div id="mensagemchoc"></div>
+</body>
+</html>
+<script>
+    function CalculoChoc(){
+        var choc= Number(input_choc.value)
+        var Nopromo = choc * 3.00
+        var yepromo = choc * 2.50
+        
+        if(choc <12 ){
+            mensagemchoc.innerHTML = `O valor da sua compra foi de ${Nopromo}.`
+        }else{(choc >= 12)
+            mensagemchoc.innerHTML = `O valor da sua compra foi de ${yepromo}.`
+        }
+    }
+</script>

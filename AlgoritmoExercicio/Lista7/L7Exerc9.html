@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Intervalo de altura inicial: <input id="input_alturaInicial"> <br>
+    Intervalo de altura final: <input id="input_alturaFinal"> <br>
+    <br>
+    Qual o seu nome? <input id="input_nome"> <br>
+    Qual a sua altura? <input id="input_altura"> <br> <br>
+    <button onclick="Altura()">Validar altura.</button> <br> <br>
+    <div id="MensagemPilotos"></div>
+</body>
+
+</html>
+<script>
+    function Altura() {
+        var alturaInicial = Number(input_alturaInicial.value)
+        var alturaFinal = Number(input_alturaFinal.value)
+        var nome = input_nome.value
+        var altura = Number(input_altura.value)
+
+        if (alturaInicial > 1 && alturaFinal > alturaInicial) {
+            if (altura >= alturaInicial && altura <= alturaFinal) {
+                MensagemPilotos.innerHTML += `O candidato ${nome} com altura de ${altura} participará do processo de seleção de piloto.`
+            }
+            else {
+                MensagemPilotos.innerHTML += `Infelizmente o candidato ${nome} com altura de ${altura} não atende os requisitos`
+            }
+
+        } else {
+            MensagemPilotos.innerHTML = `ERRO! Tente novamente.`
+        }
+    }
+</script>

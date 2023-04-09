@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 11 - Exercicio 9</title>
+</head>
+
+<body>
+    Número: <input id="input_numero">
+    <br><br>
+    Frase: <input id="input_frase">
+    <br><br>
+    <button onclick="Papagaio()">Papagaio</button>
+    <br><br>
+    <div id="frasePapagaio"></div>
+</body>
+
+</html>
+<script>
+    function Papagaio() {
+        frasePapagaio.innerHTML = ``;
+
+        var frase = input_frase.value;
+        var num = Number(input_numero.value);
+
+        var contador = 1;
+
+        while (contador < num) {
+            contador++;
+
+            var msg = "";
+            var contador2 = 0;
+
+            while (contador2 < num) {
+                mensagem += frase + "\n";
+                contador2++;
+            }
+            alert(mensagem);
+        }
+    }
+</script>

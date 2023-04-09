@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exerc 8</title>
+</head>
+<body>
+    Quantidade de homens:<input id="input_homens"> <br><br>
+    Quantidade de input mulheres:<input id="input_mulheres"><br><br>
+    <button onclick="PesoTotal()">Ligar elevador</button><br><br>
+    <div id="mensagemPeso"></div>
+</body>
+</html>
+<script>
+    function PesoTotal(){
+        var homens = Number(input_homens.value)
+        var mulheres = Number(input_mulheres.value)
+        var homensPeso = homens  *90
+        var mulheresPeso = mulheres * 70
+        var pesoTotal = homensPeso + mulheresPeso
+        var pesoTotal2 = (homensPeso + mulheresPeso) - 500
+
+        if(pesoTotal < 500){
+            mensagemPeso.innerHTML = `Elevador vai se mover, pois está com ${pesoTotal}kg`
+        }else{ mensagemPeso.innerHTML = `Alguém precisa descer. Precisa perder ${pesoTotal2}kg para mover o elevador `
+}
+    }
+</script>

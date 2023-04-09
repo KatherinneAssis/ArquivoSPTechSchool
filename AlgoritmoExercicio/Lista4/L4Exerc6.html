@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Exercicio 6 - Algoritmo</h1>
+    Qual a sua renda familiar? <br>
+    <input id="input_ValorRenda"> <br>
+    Qual o valor da prestação?<br>
+    <input id="input_ValorPrestacao"> <br> <br>
+    <button onclick="financiamento()">Ver financiamento</button> <br> <br>
+    <div id="resultadoPrestacao"></div>
+</body>
+</html>
+
+<script>
+
+    function financiamento(){
+        var ValorPrestacao = Number(input_ValorPrestacao.value);
+        var ValorRenda = Number(input_ValorRenda.value);
+        var Conta = ValorPrestacao / ValorRenda;
+        var ValorResultado = 100 * Conta;
+
+        if (ValorResultado >= 30){
+            resultadoPrestacao.innerHTML = `<b>Será necessário complementar a renda familiar.</b> <br>
+            A prestação corresponde a ${ValorResultado}% da renda familiar.`
+        }
+
+        if (ValorResultado < 30){
+            resultadoPrestacao.innerHTML = `A prestação corresponde a ${ValorResultado}% da renda familiar.`
+        } 
+    }
+
+</script>

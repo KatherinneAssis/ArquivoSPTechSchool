@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exerc 4</title>
+</head>
+<body>
+    Qual a sua frequência? <br> <br>
+    <input id="input_frequencia"><br> <br>
+    <button onclick="Calcfrequencia()">Analisar frequência.</button> <br><br>
+    <div id="imagem"></div>
+</body>
+</html>
+<script>
+    function Calcfrequencia(){
+        var frequ = Number(input_frequencia.value)
+
+        if(frequ <= 50){
+            imagem.innerHTML = `<img style="width: 250px;" src="https://media.giphy.com/media/3orif02QevxIwIBNpm/giphy.gif" alt="">`
+        } else {
+        imagem.innerHTML = `<img style="width: 250px;" src="https://media.giphy.com/media/0dp2exd5EhyRzu0brN/giphy.gif" alt="">`
+        }
+    }
+</script>

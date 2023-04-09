@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 3</title>
+</head>
+<body>
+    <h1>Exercicio 3 - Lista 3</h1>
+    De qual numero você quer ver a tabuada? 
+    <br> <br> <Input id="Inp_Numero">
+    <br> <br> <button onclick="TaNu()"> Ver Tabuada </button> <br> <br>
+    <div id="ContaTabu"></div>
+
+</body>
+</html>
+<script>
+
+    function TaNu(){
+        var Numero = Number(Inp_Numero.value);
+        var Conta1 = Numero *1;
+        var Conta2 = Numero *2;
+        var Conta3 = Numero *3;
+        var Conta4 = Numero *4;
+        var Conta5 = Numero *5;
+        var Conta6 = Numero *6;
+        var Conta7 = Numero *7;
+        var Conta8 = Numero *8;
+        var Conta9 = Numero *9;
+
+        ContaTabu.innerHTML =`
+        ${Numero} x 1 = ${Conta1}<br>
+        ${Numero} x 2 = ${Conta2}<br>
+        ${Numero} x 3 = ${Conta3}<br>
+        ${Numero} x 4 = ${Conta4}<br>
+        ${Numero} x 5 = ${Conta5}<br>
+        ${Numero} x 6 = ${Conta6}<br>
+        ${Numero} x 7 = ${Conta7}<br>
+        ${Numero} x 8 = ${Conta8}<br>
+        ${Numero} x 9 = ${Conta9}<br>`
+        }
+</script>

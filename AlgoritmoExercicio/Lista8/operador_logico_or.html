@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    Idade: <input id="input_idade" /> <br />
+    Habilitação: <input id="input_habilitacao" /> <br />
+    <button onclick="verificar()">Verificar Se Pode Dirigir</button>
+  </body>
+</html>
+
+<script>    
+  function verificar() {
+    var idade = Number(input_idade.value);
+    var habilitacao = input_habilitacao.value;
+
+    /*
+        No operador lógico "OR"/"ou", temos uma validação dupla, onde caso PELO MENOS UMA DAS DUAS seja verdadeira, a saída será verdadeira
+        Por exemplo: 
+            "Vou ficar em casa assistindo Netflix caso esteja chovendo OU nevando" - caso qualquer uma das duas condições seja válida, irá assistir Netflix
+
+        Em JavaScript, representamos o operador lógico OR utilizando duas barras ( || ) entre duas expressões lógicas (a sua validação usando o operador relacional >,<,==,!=)
+        Uso em código: 
+            if (validacao_1 || validacao_2) { alert("Executará o alert caso qualquer uma das validações seja válida!") } 
+
+        O operador lógico OR representa o exato contrário de uma validação AND
+        Por exemplo: 
+            "Se hoje fizer a partir de 30 graus E não tiver nuvens cinzas no céu, vou ao parque" - operador AND
+            "Se hoje fizer menos de 30 graus OU tiver nuvens cinzas no céu, NÃO vou ao parque" - operador OR
+
+            "Se o número inserido for menor que 0 OU maior que 100, é inválido!" - operador OR
+            "Se o número estiver entre 0 E 100, é válido!" - operador AND
+    */
+
+    if (idade < 18 || habilitacao != "S") { // entra no IF somente caso a idade seja menor que 18 OU caso a habilitacao seja diferente de "S"
+        alert("Você não pode dirigir");
+    } else { // caso a idade seja maior ou igual a 18 e caso a habilitação seja exatamente "S"
+        alert("Você pode dirigir");
+    }  
+
+/*
+    Mesma representação de código utilizando o operador lógico AND ("&&")
+
+    if (idade >= 18 && habilitacao == "S") {
+      alert("Você pode dirigir");
+    } else {
+      alert("Você não pode dirigir");
+    }
+*/
+
+  }
+</script>

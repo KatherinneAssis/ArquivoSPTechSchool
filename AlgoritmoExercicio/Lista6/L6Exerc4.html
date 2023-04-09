@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Peso de crianças com 5 anos.</h2>
+    Qual o peso da criança?<br>
+    <input id="input_pesoc"> <br><br>
+    <button onclick="CriancaPeso()">Analisar Peso</button>
+    <br><br>
+    <div id="MensagemP"></div>
+</body>
+
+</html>
+<script>
+    function CriancaPeso() {
+        var peso = Number(input_pesoc.value)
+
+        if (peso <= 13.5) {
+            MensagemP.innerHTML = `Abaixo do peso.`
+        } else if (peso >= 21.2) {
+            MensagemP.innerHTML = `Acima do peso.`
+        } else if (peso == 18.3) {
+            MensagemP.innerHTML = `Peso perfeito.`
+        } else if (peso >= 13.5 <= 21.2) {
+            MensagemP.innerHTML = `Peso na média.`
+        }
+    }
+</script>

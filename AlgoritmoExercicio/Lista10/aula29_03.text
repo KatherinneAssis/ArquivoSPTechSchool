@@ -1,0 +1,19 @@
+Length: comprimento do texto, contagem de caracteres.
+
+StartsWith('a'), exibe a primeira letra da frase.
+
+EndsWith('a'), pergunta a ultima letra.
+
+[frase.Length - 1], mostra o caracter final.
+
+Frase[indice], mostra qual é o caracter na posição pedida no indice.
+
+index('@'), mostra em que posição está o caracter.
+
+.toUpperCase()
+
+.toLowerCase()   if(frase.toLowerCase() == 'não' ||frase.toLowerCase() == 'nao')
+
+replaceAll ('a','3'), troca todos os As por 3.
+replaceAll (" ",""), tira todos os espaços.
+

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 11 - Exercício 8</title>
+</head>
+
+<body>
+    Numero: <input min="0" max="200" id="input_Numero"> <br>
+    <br>
+    <button onclick="vivaSete()">Viva o 7!</button> <br>
+    <br>
+    <div id="Multiplos"></div>
+</body>
+
+</html>
+<script>
+    function vivaSete() {
+        Multiplos.innerHTML = '';
+
+        var num = Number(input_Numero.value);
+        var contagem = 0;
+
+
+        while (contagem < num) {
+            if (contagem % 7 == 0) {
+                Multiplos.innerHTML += `${contagem}<br>`;
+            }
+            contagem += 1;
+        }
+    }
+</script>

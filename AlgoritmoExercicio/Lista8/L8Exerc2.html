@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 8 - Exercício 2</title>
+</head>
+
+<body>
+    Qual a nota do aluno no enem? <input id="input_enem"> <br> <br>
+    Qual a nota do aluno no vestibular interno? <input id="input_vestibular"> <br><br>
+    <button onclick="FaculdadeMentesBrilhantes()">Avaliação.</button>
+</body>
+
+</html>
+<script>
+    function FaculdadeMentesBrilhantes() {
+        var enem = Number(input_enem.value);
+        var vestibular = Number(input_vestibular.value);
+
+        if (enem >= 800 || vestibular >= 700) {
+            alert('"Parabéns! Aprovado.');
+        } else {
+            alert('Tente semestre que vem!');
+        }
+    }
+</script>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 5</title>
+</head>
+<body>
+    <h1>Exercicio 5 - Algoritmo</h1>
+    Qual o valor da passagem na sua cidade? 
+    <br>
+    <input id="Input_Passagem">
+    <br>
+    <br>
+    Qual a quantidade de viagens que você faz no mês?<br>
+    <input id="Input_Viagens">
+    <br>
+    <br>
+    Quantos quilómetros são da sua casa até o trabalho?
+    <br>
+    <input id="Input_QuiloM">
+    <br>
+    <br>
+    <button onclick="CalculoTransporte()">Calcular VT</button>
+    <div id="GastoTrans"></div>
+</body>
+</html>
+<script>
+    function CalculoTransporte(){
+        var Passagem = Number(Input_Passagem.value);
+        var Viagens = Number(Input_Viagens.value);
+        var QuiloM = Number(Input_QuiloM.value);
+        var ViagemApp = Viagens/10;
+        var ViagemOni = Viagens - ViagemApp;
+        var PrecoApp = QuiloM * 0.75 * ViagemApp;
+        var PrecoOni = Passagem * ViagemOni;
+        var ValorTotal = PrecoApp + PrecoOni;
+
+        GastoTrans.innerHTML = `Você vai gastar R$${ValorTotal.toFixed(2)} por mês com transporte.`
+    }
+</script>

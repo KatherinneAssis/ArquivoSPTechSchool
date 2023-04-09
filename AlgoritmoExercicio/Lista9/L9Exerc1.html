@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 9 - Exercicio 1</title>
+</head>
+
+<body>
+    <img src="http://cbissn.ibict.br/images/phocagallery/galeria2/thumbs/phoca_thumb_l_image03_grd.png" alt="pinguins "
+        width="250px " height="200px; " id="ImagemPinguins"> <br> <br>
+    <button onclick="AumentarLargura()">Aumentar a Largura.</button>
+    <button onclick="ReduzirLargura()">Reduzir a Largura.</button>
+</body>
+
+</html>
+<script>
+
+    var Imagem = ImagemPinguins.width
+    function AumentarLargura() {
+        Imagem += 10;
+        ImagemPinguins.width = Imagem;
+    }
+
+    function ReduzirLargura() {
+        Imagem -= 10;
+        ImagemPinguins.width = Imagem;
+    }
+</script>

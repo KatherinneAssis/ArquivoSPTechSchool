@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exerc 6</title>
+</head>
+<body>
+    Tempertura ambiente: <input id="input_temperatura">
+    <button onclick="Temperatura()">Verificar clima</button> <br><br>
+    <div id="imagemTemp"></div>
+</body>
+</html>
+<script>
+    function Temperatura(){
+        var temp = Number(input_temperatura.value)
+      
+        if(temp <= 10){
+            imagemTemp.innerHTML = `<img style="width: 250px;" src="https://fsp.usp.br/eccco/wp-content/uploads/2022/09/sviatoslav-huzii-I497Uc8xWXQ-unsplash-scaled-e1664885131928-768x609.jpg" alt="">`
+        }else{
+            imagemTemp.innerHTML = ` <img style="width: 250px;" src="https://thumbs.dreamstime.com/b/morango-podre-101462467.jpg" alt="">`
+        }
+    }
+</script>

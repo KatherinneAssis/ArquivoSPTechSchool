@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Qual o nome da empresa? <input id="input_empresa"> <br> <br>
+    Qual o valor bolsa da empresa? <input id="input_bolsa"> <br> <br>
+    Qual o valor do VR da empresa? <input id="input_Refeicao"> <br> <br>
+    Quanto tempo a empresa fica da faculdade? (em minutos) <input id="input_horario"> <br> <br>
+    <button onclick="EmpresaBoa()">É preferida?</button> <br> <br>
+    <div id="MsgEmpresa"></div>
+</body>
+
+</html>
+<script>
+    function EmpresaBoa() {
+        var empresa = input_empresa.value
+        var bolsa = Number(input_bolsa.value)
+        var refeicao = Number(input_Refeicao.value)
+        var horario = Number(input_horario.value)
+
+        if (bolsa >= 1800 || refeicao >= 20 || horario < 30) {
+            MsgEmpresa.innerHTML = `A empresa ${empresa} é uma de suas preferências.`
+        } else {
+            MsgEmpresa.innerHTML = `A empresa ${empresa} está fora da sua lista.`
+        }
+    }
+</script>

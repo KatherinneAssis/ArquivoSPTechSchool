@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 4</title>
+</head>
+<body>
+    <h1>Exercicio 4 - Algoritmo</h1>
+    Qual o sabor da pizza?      <input id="Input_Pizza"> <br><br>;
+    Qual o valor da pizza?      <input id="Input_ValorP">
+    <br><br>
+    Quantos amigos irão comer?  <input id="Input_Amigos">
+    <br><br>
+    <button onclick="CalcularPizza()"> Ver valor por amigo </button><br><br>
+    Obs: Caixinha do entregador equivale a 10% do valor da pizza.
+    <br><br><br><br>
+    <div id="Valor"></div>
+
+</body>
+</html>
+<script>
+    function CalcularPizza(){
+        var Sabor = (Input_Pizza.value);
+        var ValorP = Number(Input_ValorP.value);
+        var Amigos = Number(Input_Amigos.value);
+        var Caixinha = ValorP/10;
+        var ValorTotal = (ValorP+Caixinha)/Amigos;
+
+        Valor.innerHTML = `Cada amigo vai colaborar com R$${ValorTotal} para a pizza de ${Sabor}.`
+
+    }
+</script>

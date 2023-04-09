@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 11 - Exercico 6</title>
+</head>
+
+<body>
+    Qual a pessoa que você mais ama no mundo?<br>
+    <input id="input_nomePessoa"> <br>
+    <br>
+    Quanto você ama essa pessoa? <br>
+    <input id="input_amaQuanto"> <br>
+    <br>
+    <button onclick="expressarAmor()">Expressar amor</button> <br>
+    <br>
+    <div id="repeticao"></div>
+</body>
+
+</html>
+<script>
+    function expressarAmor() {
+        var nomep = input_nomePessoa.value;
+        var amaq = Number(input_amaQuanto.value);
+        var numero = 1;
+        
+        while (numero <= amaq) {
+            repeticao.innerHTML += `${nomep}, eu te amo! Sempre lembre disso! <br>`;
+            numero += 1;
+        }
+    }
+</script>

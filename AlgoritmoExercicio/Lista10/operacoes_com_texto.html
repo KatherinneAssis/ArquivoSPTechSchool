@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Operações com Texto</title>
+  </head>
+  <body>
+    <h3>Operações com Textos</h3>
+
+    Digite uma frase: <input id="input_frase" />
+    <button onclick="analisar()">Analisar</button>
+    <br /><br />
+    <div id="div_resultado"></div>
+  </body>
+</html>
+
+<script>
+  function analisar() {
+    var frase = input_frase.value;
+    div_resultado.innerHTML = ""; // limpa a div
+
+    /*
+        Em JavaScript, todos os textos são tratados como um conjunto de caracteres;
+        Portanto, existem algumas funcionalidades nativas que podemos utilizar para manipular textos, que são: 
+          "texto".length - retorna o comprimento do texto, ou seja, a quantidade de caracteres (nesse caso, "texto" possui 5 letras) ;
+          "texto".startsWith("a") - retorna "true" caso o "texto" COMECE COM a letra "a" ou "false", em qualquer outro cenário;
+          "texto".endsWith("a") - retorna "true" caso o "texto" TERMINE COM a letra "a" ou "false", em qualquer outro cenário;
+          "texto"[0] - retorna o valor do caractere que está no índice 0, que neste caso, é a letra "t" (a contagem do índice dos caracteres se inicia em 0, sendo válido qualquer valor positivo);
+          "texto".indexOf("a") - retorna o índice do primeiro caractere "a" que ele encontrar dentro do texto (nesse caso, não tem "a", então retornaria -1, afinal, está fora da contagem dos índices - que começa em 0 e vai até infinito)
+          "texto".toUpperCase() - retorna o "texto" transformado para CAIXA ALTA (nesse caso, retornaria "TEXTO");
+          "texto".toLowerCase() - retorna o "texto" transformado para caixa baixa (nesse caso, retornaria "texto");
+          "texto".replace("a", "@") - substitui o primeiro caracter "a" que encontrar dentro de "texto" pelo caractere "@";
+          "texto".replaceAll("a", "@") - substitui todos os caracteres "a" que encontrar dentro de "texto" pelo caractere "@";
+      */
+
+    // "texto".length -> devolve o comprimento do texto / quantidade de caracteres
+    div_resultado.innerHTML += `Quantidade de caracteres: <b>${frase.length}</b> <br>`;
+
+    // se o comprimento da frase for menor que 8
+    if (frase.length < 8) {
+      div_resultado.innerHTML += `- Não possui 8 letras<br>`;
+    } else {
+      div_resultado.innerHTML += `- Possui ao menos 8 letras<br>`;
+    }
+
+    // .startsWith('a') -> retorna verdadeiro SOMENTE caso a frase comece com 'a', como por exemplo 'abacate' ou 'aaamora'
+    // .startsWith('a') -> retorna falso em qualquer cenário onde a frase NÃO comece com 'a'
+    div_resultado.innerHTML += `Começa com "a"? <b>${frase.startsWith("a")}</b> <br>`;
+
+    div_resultado.innerHTML += `Começa com "#"? <b>${frase.startsWith("#")}</b> <br>`;
+
+    // .endsWith('.com') -> retorna verdadeiro SOMENTE caso a frase termine com '.com', como em 'teste.com'
+    // .endsWith('.com') -> retorna falso em qualquer cenário onde a frase NÃO termine com '.com'
+    div_resultado.innerHTML += `Termina com ".com"? <b>${frase.endsWith(".com")}</b> <br>`;
+    div_resultado.innerHTML += `Termina com "e"? <b>${frase.endsWith("e")}</b> <br>`;
+    div_resultado.innerHTML += `Termina com "@"? <b>${frase.endsWith("@")}</b> <br>`;
+
+    div_resultado.innerHTML += `Primeira letra da frase: <b>${frase[0]}</b> <br>`; // acessa o caractere que está no índice 0, ou seja, o primeiro caractere da frase
+    div_resultado.innerHTML += `Terceira letra da frase: <b>${frase[2]}</b> <br>`; // acessa o caractere que está no índice 2, ou seja, o terceiro caractere da frase
+    div_resultado.innerHTML += `Última letra da frase: <b>${
+      frase[frase.length - 1]
+    }</b> <br>`; // acessa o caractere que está no índice "frase.length - 1", ou seja, estou pegando o comprimento total da frase e deslocando o índice para a esquerda, reduzindo 1, fazendo com que pegue o último caractere, sem importar o tamanho da frase
+
+    // .indexOf() -> retorna o ÍNDICE DO caractere que você passou pra ele (nesse caso, o @)
+    // caso não contenha o caractere ou palavra especificada dentro da frase, retornará -1, indicando que a palavra não existe em nenhum índice válido dentro da frase
+    div_resultado.innerHTML += `Onde está o primeiro @? <b>${frase.indexOf("@")}</b> <br>`;
+
+    // criando variável para armazenar o índice da palavra "abc" dentro da frase;
+    // caso não contenha a palavra "abc" na frase, retornará o índice -1, indicando que a palavra não existe em nenhum índice válido dentro da frase
+    var indice_abc = frase.indexOf("abc");
+
+    // valida se o índice é inválido (ou seja, se for -1 porque não encontrou a palavra);
+    if (indice_abc < 0) {
+      div_resultado.innerHTML += `Índice de "abc": <b>não possui "abc" nessa frase!</b> <br>`;
+    } else {
+      div_resultado.innerHTML += `Índice de "abc": <b>${indice_abc}</b> <br>`;
+    }
+
+    // .toUpperCase() -> retorna o texto inteiro como CAIXA ALTA / maiúsculas
+    div_resultado.innerHTML += `Como fica em maiúsculo (CAIXA ALTA): <b>${frase.toUpperCase()}</b> <br>`;
+
+    // .toUpperCase() -> retorna o texto inteiro como caixa baixa / minúsculas
+    div_resultado.innerHTML += `Como fica em minúsculo (caixa baixa): <b>${frase.toLowerCase()}</b> <br>`;
+
+    // transforma o texto para maiúsculo antes de validar
+    if (frase.toUpperCase() == "SIM") {
+      div_resultado.innerHTML += `Você digitou SIM! <br>`;
+    }
+
+    // transforma o texto para maiúsculo antes de validar, verificando as opções com e sem acento
+    if (frase.toUpperCase() == "NÃO" || frase.toUpperCase() == "NAO") {
+      div_resultado.innerHTML += `Você digitou NÃO! <br>`;
+    }
+
+    div_resultado.innerHTML += `Frase original: <b>${frase}</b> <br>`;
+
+    // replace("x", "y") -> retorna um novo valor de texto substituindo o primeiro "x" que encontrar por "y"
+    div_resultado.innerHTML += `Frase com @ no primeiro 'a': <b>${frase.replace("a","@")}</b> <br>`;
+
+    // replaceAll("x", "y") -> retorna um novo valor de texto, substituindo todos os "x" que encontrar por "y"
+    div_resultado.innerHTML += `Frase sem espaços: <b>${frase.replaceAll(" ", "")}</b> <br>`;
+
+    // replaceAll("x", "y") retorna um valor de texto realizando a alteração de todos os "x" que encontrar por  "y"
+    // portanto, podemos encadear vários replaceAll(), a fim de trocar outros valores logo após trocar o valor anterior
+    div_resultado.innerHTML += `Frase com 4, 5 e 3: <b>
+                                ${ frase
+                                    .replaceAll("a", "4")
+                                    .replaceAll("s", "5")
+                                    .replaceAll("e", "3")
+                                    .replaceAll("A", "4")
+                                    .replaceAll("S", "5")
+                                    .replaceAll("E", "3") }</b> <br>`;
+  }
+</script>

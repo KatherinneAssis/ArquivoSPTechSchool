@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 2 - Lista 3 - 27/02</title>
+</head>
+<body>
+    <h1>Exercicio 2</h1>
+    Quantidade de votos do Candidato A: <input id="Input_CandA"> 
+    <br><br>
+    Quantidade de votos do Candidato B: <input id="Input_CandB">
+    <br> <br>
+    Quantidade de votos brancos: <input id="Input_VBran">
+    <br> <br>
+    Quantidade de votos nulos: <input id='Input_VNulo'>
+    <br><br>
+    <button onclick="ResultadoFinal()">Resultado da Eleição</button>
+    <br> <br>
+    <div id="divVotos"></div>
+
+</body>
+</html>
+<script>
+    function ResultadoFinal(){
+        var CandA = Number(Input_CandA.value);
+        var CandB = Number(Input_CandB.value);
+        var VBran = Number(Input_VBran.value);
+        var VNulo = Number(Input_VNulo.value);
+        var tudo = CandA + CandB + VBran + VNulo;
+        var CandAPor = Number(CandA/tudo)*100;
+        var CandBPor = Number(CandB/tudo)*100;
+        var Invalido = (((VBran + VNulo) / tudo)*100)
+
+        divVotos.innerHTML = 
+        `Total de votos: <u> ${tudo} </u> <br>
+        Candidato A: ${CandAPor}%(${CandA} votos) <br>
+        Candidato B: ${CandBPor}%(${CandB} votos) <br>
+        Invalidos: ${Invalido}%(${VBran + VNulo} votos) <br>`
+    }
+       
+</script>

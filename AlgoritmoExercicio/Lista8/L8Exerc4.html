@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+    Escolha dentre as opções: <br>
+    <ul>
+        <li type="none">Dinheiro </li>
+        <li type="none">Cartão de débito</li> 
+        <li type="none">Cartão de crédito</li>
+        <li type="none">Boleto</li>
+    </ul>
+    </p>
+    Qual o modo de pagamento? <input id="input_pagamento"> <button onclick="PagamentoCompra()">Analisar compra.</button> <br> <br>
+    <div id="MsgPagamento"></div>
+</body>
+</html>
+<script>
+    function PagamentoCompra(){
+        var pag = input_pagamento.value;
+
+        if(pag == 'Dinheiro' || pag == 'Cartão de débito'){
+            MsgPagamento.innerHTML = ('Você terá que pagar a vista.');
+        }else if(pag == 'Boleto' || pag == 'Cartão de crédito'){
+            MsgPagamento.innerHTML = ('Pagamento poderá ser parcelado.');
+        }else{
+            MsgPagamento.innerHTML = ('ERRO, tente novamente.');
+        }
+    }
+</script>

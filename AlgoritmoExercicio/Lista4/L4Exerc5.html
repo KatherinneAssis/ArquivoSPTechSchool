@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 5</title>
+</head>
+<body>
+    <h1>Exercicio 5 - Algoritmo</h1>
+    Quantos kWh você consome por mês? <br> 
+    <input id="input_kWh">
+    <button onclick="calculoLuz()">Calcular conta de luz</button>
+    <div id="Consumo"></div>
+</body>
+</html>
+
+<script>
+    function calculoLuz(){
+        var kWh = Number(input_kWh.value)
+        var resultadokWh = kWh * 0.85
+        var resultadoMenor = (resultadokWh * 10) / 100
+
+        if(kWh < 100)
+        Consumo.innerHTML = `${resultadoMenor}`
+        if(kWh >= 100)
+        Consumo.innerHTML = `${resultadoMenor}`
+    }
+</script>

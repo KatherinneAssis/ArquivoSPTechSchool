@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Frase: <input id="input_frase"> <br>
+    <button onclick="exibir()">Exibir</button>
+    <div id="div_frase"></div>
+</body>
+</html>
+
+<script>
+
+    var frase = input_frase.value;
+
+    function exibir() {
+        frase = input_frase.value;
+        div_frase.innerHTML = frase;
+    }
+
+</script>

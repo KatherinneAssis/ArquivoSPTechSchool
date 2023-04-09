@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 11 - Exercício 12</title>
+</head>
+
+<body>
+    Qual tabuada você quer ver? <br>
+    <input id="input_tabuada" type="number" min="2" max="9"> <br>
+    <br>
+    <button onclick="verTabuaba()"> Ver Tabuada </button> <br>
+    <br>
+    <div id="msgDiv"></div>
+
+    <span style="color: ;"></span>
+</body>
+
+</html>
+<script>
+    function verTabuaba(){
+        var num = Number(input_tabuada.value);
+        var contador = 0;
+
+        while(contador <= num){
+            if(conta % num == 0){
+                msgDiv.innerHTML += ;
+            }
+        }
+    }
+</script>

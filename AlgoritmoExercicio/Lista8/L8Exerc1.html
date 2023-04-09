@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Lista 8 - Exercício 1</title>
+</head>
+
+<body>
+    Qual o nome da fruta? <input id="input_fruta"> <br> <br>
+    <button onclick="JulianeCome()">Vai comer?</button>
+</body>
+
+</html>
+<script>
+    function JulianeCome() {
+        var fruta = input_fruta.value;
+
+        if (fruta == 'Abacaxi' || fruta == 'Uva') {
+            alert(`Sim, vai comer ${fruta}.`);
+        } else {
+            alert(`A fruta ${fruta} ela não come.`);
+        }
+    }
+</script>

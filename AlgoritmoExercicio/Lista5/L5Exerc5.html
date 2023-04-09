@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 5</title>
+</head>
+<body>
+    Nota 1: <input id="input_nota1"> <br>
+    Nota 2: <input id="input_nota2"> <br><br>
+    <button onclick="NotasA()"> Verificar Situação</button>
+    <div id="MsgSituacao"></div>
+</body>
+</html>
+<script>
+    function NotasA(){
+        var nota1 = Number(input_nota1.value)
+        var nota2 = Number(input_nota2.value)
+        var media = (nota1 + nota2) / 2
+
+        if(media >= 6){
+            MsgSituacao.innerHTML = `Parabéns, aprovado!`
+        }else{
+            MsgSituacao.innerHTML = `Tente outra vez...`
+        }
+    }
+</script>

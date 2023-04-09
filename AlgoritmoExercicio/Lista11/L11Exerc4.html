@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 11 - Exercício 4</title>
+</head>
+
+<body>
+    <button onclick="coracao()">S2 Pares.</button> <br>
+    <br>
+    <div id="numeros"></div>
+</body>
+
+</html>
+<script>
+    function coracao() {
+        numeros.innerHTML = ' ';
+        var numero = 0;
+        while (numero <= 100) {
+            numeros.innerHTML += numero + `<br>`;
+            numero += 2;
+        }
+    }
+</script>

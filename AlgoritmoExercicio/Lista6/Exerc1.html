@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Qual a temperatura? <input id="input_temp">
+    <button onclick="verificar()">Verificar temperatura</button>
+    <div id="Temperatura"></div>
+</body>
+
+</html>
+<script>
+    function verificar() {
+        var temp = Number(input_temp.value)
+
+        if (temp < 10) {
+            Temperatura.innerHTML = `Temperatura está muito baixa.`
+        } else if (temp > 20) {
+            Temperatura.innerHTML = `A temperatura está muito alta.`
+        } else {
+            Temperatura.innerHTML = `A temperarura está ideal.`
+        }
+    }
+</script>

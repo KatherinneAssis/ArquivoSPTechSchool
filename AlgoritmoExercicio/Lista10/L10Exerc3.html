@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 10 - Exercício 3</title>
+</head>
+
+<body>
+    Nota: <input id="input_nota"> <br>
+    <br>
+    Frequência: <input id="input_frequencia"> <br>
+    <br>
+    <button onclick="AvaliarAluno()">Avaliar</button> <br>
+    <br>
+    <div id="MensagemAluno"></div>
+</body>
+
+</html>
+<script>
+    function AvaliarAluno() {
+        var nota = Number(input_nota.value);
+        var Freq = Number(input_frequencia.value);
+        var notaFreq = nota > 6 && Freq > 75;
+        var notaBaixa = nota <= 6;
+        var freqBaixa = Freq <= 75;
+
+        if (freqBaixa) {
+            MensagemAluno.innerHTML += `Reprovado(a) por frequência! <br>`
+        } else if (notaBaixa) {
+            MensagemAluno.innerHTML += `Reprovado(a) por nota! <br>`
+        } else {
+            MensagemAluno.innerHTML = `Parabéns, aprovado(a)! <br>`
+        }
+    }
+</script>

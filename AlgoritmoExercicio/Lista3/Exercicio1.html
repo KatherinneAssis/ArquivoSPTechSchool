@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 1 - Lista 3 - 27/02</title>
+</head>
+<body>
+    <h1>Exercicio de Algoritmo - Horas de sono</h1>
+
+    Quantas horas você dormiu está noite? <input id="Input_HoraSono">
+    <br>
+    <button onclick="CalculoHoras()">Calcular Sono</button>
+    <div id="divFrase"></div>
+</body>
+</html>
+<script>
+    function CalculoHoras(){
+      var HoraSono = Number(Input_HoraSono.value);
+      var fase1 = (HoraSono *5) / 100;
+      var fase2 = (HoraSono *45) / 100;
+      var fase3 = (HoraSono *30) / 100;
+      var fase4 = (HoraSono *20) / 100;
+      divFrase.innerHTML = `Ao dormir ${HoraSono} horas, você dormiu: <br>
+      <u>${fase1}</u> horas na fase 1 <br>
+      <u>${fase2}</u> horas na <b>fase 2</b> <br>
+      <u>${fase3}</u> horas na <b>fase 3</b> <br>
+      <u>${fase4}</u> horas na <b>REM</b> 
+      `;
+
+    }
+  </script>

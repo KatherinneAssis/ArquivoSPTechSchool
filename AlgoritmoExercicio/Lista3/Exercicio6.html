@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 6</title>
+</head>
+<body>
+    <h1>Exercicio 6 - Algoritmo</h1>
+    Qual o KI base do guerreiro Sayajin? <br>
+    <input id="Input_KIBase">
+    <br>
+    <h3>Transformar em:</h3>
+    <button onclick="Sayajin1()">SSJ</button>
+    <button onclick="Sayajin2()">SSJ2</button>
+    <button onclick="Sayajin3()">SSJ3</button>
+    <div id="MensagemSSJ"></div>
+    
+</body>
+</html>
+<script>
+    function Sayajin1(){
+        var KIBase = Number(Input_KIBase.value)
+        var kibase1 = KIBase *50
+        MensagemSSJ.innerHTML += `<h1>Após se transformar em SSJ, o ki desse Sayajin passa a ser de ${kibase1} <br></h1>`
+    }
+    function Sayajin2(){
+        var KIBase = Number(Input_KIBase.value)
+        var kibase2 = KIBase *100
+        MensagemSSJ.innerHTML += `Após se transformar em SSJ2, o ki desse Sayajin passa a ser de ${kibase2}<br>`
+    }
+    function Sayajin3(){
+        var KIBase = Number(Input_KIBase.value)
+        var kibase3 = KIBase *200
+
+        MensagemSSJ.innerHTML += `Após se transformar em SSJ3, o ki desse Sayajin passa a ser de ${kibase3} <br>`
+    }
+</script>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Nota 1: <input id="input_n1"> <br>
+    Nota 2: <input id="input_n2"> <br>
+    Frequência: <input id="input_freq"> <br>
+    <button onclick="analisar()">Analisar</button>
+</body>
+</html>
+
+<script>
+
+    function analisar() {
+        /* 
+            Um valor booleano é um tipo de dado que pode ter apenas dois valores possíveis: true ou false.
+            Os valores Booleanos são frequentemente usados em expressões condicionais, como nos testes das estruturas de decisão "if". 
+            Quando uma expressão lógica é avaliada, ela retorna um valor booleano que indica se a condição é verdadeira ou falsa.
+            
+            Exemplos: 
+                1 < 3    // essa expressão lógica retorna o valor booleano "true";
+                1 > 3    // essa expressão lógica retorna o valor booleano "false";
+                1 == 3   // essa expressão lógica retorna o valor booleano "false";
+                1 != 3   // essa expressão lógica retorna o valor booleano "true";
+
+            Os operadores lógicos, como AND (&&) e OR (||) são usados para combinar ou negar valores booleanos em expressões mais complexas.
+            Esses operadores permitem que o desenvolvedor faça comparações e lógicas mais avançadas, usando os valores booleanos como base.
+
+            Exemplos: 
+                var a = 4;                   // declara variável "a";
+                if (a >= 1 && a <= 5) {...}  // expressão lógica com operador lógico;
+                if (true && true) {...}      // calculando primeiro as expressões dos operadores relacionais da equação;
+                if (true) {...}              // ao final, retorna o valor booleano "true", porque as outras expressões retornaram "true", utilizando o operador AND (&&);
+
+
+            Porém, para simplificar as validações e tornar nosso código mais organizado, podemos criar variáveis "booleanas", onde vão armazenar valores booleanos;
+            Essas variáveis, servem para guardarmos quaisquer validações que a gente queira fazer, a fim de facilitar o entendimento
+            
+            Exemplos: 
+                var a = true;    // retorna boolean "true"
+                var b = false;   // retorna boolean "false"
+                var c = a && b;  // retorna boolean "false", pois uma das expressões deu "false";
+                var d = 6 > 7;   // retorna boolean "false", pois 6 não é maior que 7;
+                var xpto_esta_preenchido = input_xpto.value != ""  // retorna true caso a "input_xpto" não esteja vazia
+
+                alert(a);
+                alert(b);
+                alert(c);
+                alert(d);
+                alert(xpto_esta_preenchido);
+        */
+
+        var nota1 = Number(input_n1.value);
+        var nota2 = Number(input_n2.value);
+        var frequencia = Number(input_freq.value);
+
+        var media = (nota1 + nota2) / 2; // calculando média
+
+        // armazenando a validação da média dentro de uma variável - quando chamar a variável, ela retornará "true" ou "false"
+        var validacao_media = media >= 6; 
+
+        // armazenando a validação da frequência dentro de uma variável - quando chamar a variável, ela retornará "true" ou "false"
+        var validacao_frequencia = frequencia >= 75; 
+
+        // usando as variáveis com as validações para gerar uma nova validação - quando chamar a variável, ela retornará "true" ou "false"
+        var validacao_aprovacao = validacao_frequencia && validacao_media; 
+
+        if (validacao_aprovacao) { // utiliza a variável booleana, que possui a validação completa
+            alert("Aprovado")
+        } else {
+            alert("Reprovado")
+        }
+    }
+</script>
+
+
+
